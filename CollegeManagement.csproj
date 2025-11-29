@@ -1,0 +1,78 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'https' " />
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'http' " />
+  <ItemGroup>
+    <None Remove="Services\" />
+    <None Remove="Controllers\Student\" />
+    <None Remove="Views\Student\" />
+    <None Remove="Models\Student\" />
+    <None Remove="Services\Student\" />
+    <None Remove="Views\StudentDashboard\" />
+    <None Remove="Models\Courses\" />
+    <None Remove="Models\Results\" />
+    <None Remove="Models\Assignments\" />
+    <None Remove="Models\Attendences\" />
+    <None Remove="Models\Documents\" />
+    <None Remove="Models\Fees\" />
+    <None Remove="Models\ViewModels\" />
+    <None Remove="Models\Timetables\" />
+    <None Remove="Models\Rooms\" />
+    <None Remove="Models\Lecturers\" />
+    <None Remove="Models\Emails\" />
+    <None Remove="Services\Email\" />
+    <None Remove="Controllers\Account\" />
+    <None Remove="Views\Account\" />
+    <None Remove="Models\ViewModels\Account\" />
+    <None Remove="Services\Sms\" />
+    <None Remove="Models\Smss\" />
+    <None Remove="Models\ViewModels\Profiles\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Services\" />
+    <Folder Include="Controllers\Student\" />
+    <Folder Include="Views\Student\" />
+    <Folder Include="Models\Student\" />
+    <Folder Include="Services\Student\" />
+    <Folder Include="wwwroot\images\" />
+    <Folder Include="Views\StudentDashboard\" />
+    <Folder Include="Models\Courses\" />
+    <Folder Include="Models\Results\" />
+    <Folder Include="Models\Assignments\" />
+    <Folder Include="Models\Attendences\" />
+    <Folder Include="Models\Documents\" />
+    <Folder Include="Models\Fees\" />
+    <Folder Include="Models\ViewModels\" />
+    <Folder Include="Models\Timetables\" />
+    <Folder Include="Models\Rooms\" />
+    <Folder Include="Models\Lecturers\" />
+    <Folder Include="Models\Emails\" />
+    <Folder Include="Services\Email\" />
+    <Folder Include="Controllers\Account\" />
+    <Folder Include="Views\Account\" />
+    <Folder Include="Models\ViewModels\Account\" />
+    <Folder Include="Services\Sms\" />
+    <Folder Include="Models\Smss\" />
+    <Folder Include="Models\ViewModels\Profiles\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.20" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.3.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.20" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="7.0.20" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.20">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Twilio" Version="7.13.7" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\images\" />
+  </ItemGroup>
+</Project>
