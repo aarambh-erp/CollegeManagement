@@ -1,0 +1,138 @@
+﻿@{
+    Layout = "_Layout";   // Parent layout
+}
+
+@RenderSection("Styles", required: false)
+
+<!-- Student Portal Styles -->
+<style>
+    .student-wrapper {
+        display: flex;
+        min-height: 90vh;
+    }
+
+    /* Sidebar */
+    .student-sidebar {
+        width: 250px;
+        background-color: #1f2937; /* deep gray */
+        color: white;
+        padding-top: 20px;
+        min-height: 100vh;
+        position: sticky;
+        top: 0;
+    }
+
+        .student-sidebar .sidebar-header {
+            font-size: 20px;
+            font-weight: bold;
+            padding: 15px 20px;
+            text-transform: uppercase;
+            color: #f1f5f9;
+        }
+
+        .student-sidebar ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+            .student-sidebar ul li {
+                margin-bottom: 5px;
+            }
+
+                .student-sidebar ul li a {
+                    display: block;
+                    padding: 12px 20px;
+                    color: #e5e7eb;
+                    text-decoration: none;
+                    font-size: 16px;
+                    border-left: 4px solid transparent;
+                    transition: all 0.3s;
+                }
+
+                    .student-sidebar ul li a:hover,
+                    .student-sidebar ul li a.active {
+                        background-color: #374151;
+                        border-left: 4px solid #3b82f6; /* blue highlight */
+                        color: #fff;
+                    }
+
+    /* Main content */
+    .student-content {
+        flex-grow: 1;
+        padding: 30px;
+        background-color: #f9fafb;
+        min-height: 100vh;
+    }
+    body {
+        margin: 0;
+        background-color: #f3f4f6 !important; /* light gray outside area */
+    }
+
+    .student-wrapper {
+        display: flex;
+        min-height: 100vh; /* must be full height */
+        width: 100%; /* must be full width */
+    }
+</style>
+
+
+
+<div class="student-wrapper">
+
+    <!-- Sidebar -->
+    <div class="student-sidebar">
+        <div class="sidebar-header">Student Panel</div>
+
+        <ul>
+            <li>
+                <a asp-controller="StudentDashboard" asp-action="index" class="@(ViewData["ActiveTab"] as string == "Dashboard" ? "active" : "")">
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a asp-controller="StudentDashboard" asp-action="profile" class="@(ViewData["ActiveTab"] as string == "Profile" ? "active" : "")">
+                    Profile
+                </a>
+            </li>
+
+            <li>
+                <a asp-controller="StudentDashboard" asp-action="courses" class="@(ViewData["ActiveTab"] as string == "Courses" ? "active" : "")">
+                    Courses
+                </a>
+            </li>
+
+            <li>
+                <a asp-controller="StudentDashboard" asp-action="timetable" class="@(ViewData["ActiveTab"] as string == "Timetable" ? "active" : "")">
+                    Time-Table
+                </a>
+            </li>
+
+            <li>
+                <a asp-controller="StudentDashboard" asp-action="assignments" class="@(ViewData["ActiveTab"] as string == "Assignments" ? "active" : "")">
+                    Assignments
+                </a>
+            </li>
+
+            <li>
+                <a asp-controller="StudentDashboard" asp-action="results" class="@(ViewData["ActiveTab"] as string == "Results" ? "active" : "")">
+                    Results
+                </a>
+            </li>
+
+            <li>
+                <a asp-controller="StudentDashboard" asp-action="fees" class="@(ViewData["ActiveTab"] as string == "Fees" ? "active" : "")">
+                    Fee Details
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Main content -->
+    <main class="student-content">
+        @RenderBody()
+    </main>
+
+</div>
+
+@RenderSection("Scripts", required: false)

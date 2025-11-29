@@ -1,0 +1,84 @@
+﻿@model List<CollegeManagement.Models.Assignments.Assignment>
+
+@{
+    Layout = "_StudentLayout";
+    ViewBag.ActiveTab = "Assignments";
+}
+
+
+<h2 class="mb-4 text-center">My Assignments</h2>
+
+<div class="row">
+    @foreach (var a in Model)
+    {
+        var isOverdue = a.DueDate < DateTime.Now;
+        var isDueSoon = a.DueDate <= DateTime.Now.AddDays(2) && !isOverdue;
+
+        string dueClass = isOverdue ? "text-danger fw-bold"
+                        : isDueSoon ? "text-warning fw-bold"
+                        : "text-success fw-bold";
+
+        string statusClass = a.Status switch
+        {
+            "Completed" => "badge bg-success",
+            "InProgress" => "badge bg-primary",
+            "Pending" => "badge bg-warning text-dark",
+            _ => "badge bg-secondary"
+        };
+        <div class="col-md-6 mb-4">
+            <div class="card shadow-sm assignment-card">
+                <div class="card-body">
+
+                    <h5 class="card-title">@a.Title</h5>
+                    <span class="@statusClass">@a.Status</span>
+
+                    <hr />
+
+                    <p><strong>Course:</strong> @a.Course?.CourseName</p>
+                    <p><strong>Description:</strong> @a.Description</p>
+                    <p><strong>Faculty Name:</strong> @a.Lecturer?.Name</p>
+
+                    <p>
+                        <strong>Due Date:</strong>
+                        <span class="@dueClass">@a.DueDate.ToString("dd MMM yyyy, hh:mm tt")</span>
+                    </p>
+
+                    <div class="mt-3 d-flex justify-content-between">
+
+                        @if (!string.IsNullOrEmpty(a.AssignmentFilePath))
+                        {
+                            <a href="@a.AssignmentFilePath" class="btn btn-sm btn-outline-info" target="_blank">
+                                View File
+                            </a>
+                        }
+                        else
+                        {
+                            <span class="text-muted">No file uploaded</span>
+                        }
+
+                        @if (a.Status != "Completed")
+                        {
+                            <a href="#" class="btn btn-sm btn-primary">
+                                Submit Assignment
+                            </a>
+                        }
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+<style>
+    .assignment-card {
+        border-radius: 12px;
+        transition: all .3s ease;
+    }
+
+        .assignment-card:hover {
+            box-shadow: 0 4px 25px rgba(0,0,0,.15);
+            transform: translateY(-4px);
+        }
+</style>
