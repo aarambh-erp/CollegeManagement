@@ -1,0 +1,80 @@
+﻿<Properties StartupConfiguration="{47D617E9-3015-4C5D-930F-543B828362C6}|https">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="CollegeManagement/Views/Shared/_StudentLayout.cshtml">
+    <Files>
+      <File FileName="CollegeManagement/Controllers/HomeController.cs" Line="1" Column="1" />
+      <File FileName="CollegeManagement/Program.cs" Line="26" Column="19" />
+      <File FileName="CollegeManagement/appsettings.json" />
+      <File FileName="CollegeManagement/Properties/launchSettings.json" />
+      <File FileName="CollegeManagement/Models/CollegeContext.cs" Line="27" Column="41" />
+      <File FileName="CollegeManagement/Views/Shared/_Layout.cshtml" Line="93" Column="35" />
+      <File FileName="CollegeManagement/Models/Student/StudentLogin.cs" Line="1" Column="1" />
+      <File FileName="CollegeManagement/Services/Student/IStudentRepository.cs" Line="20" Column="50" />
+      <File FileName="CollegeManagement/Models/ErrorViewModel.cs" />
+      <File FileName="CollegeManagement/Views/Home/Index.cshtml" Line="1" Column="1" />
+      <File FileName="CollegeManagement/CollegeManagement.csproj" />
+      <File FileName="CollegeManagement/Views/Student/StudentLogin.cshtml" Line="81" Column="15" />
+      <File FileName="CollegeManagement/wwwroot/css/site.css" />
+      <File FileName="CollegeManagement/Controllers/Student/StudentsController.cs" Line="33" Column="10" />
+      <File FileName="CollegeManagement/Controllers/Student/StudentDashboardController.cs" Line="47" Column="31" />
+      <File FileName="CollegeManagement/Views/StudentDashboard/Index.cshtml" Line="163" Column="15" />
+      <File FileName="CollegeManagement/Views/StudentDashboard/Profile.cshtml" Line="109" Column="1" />
+      <File FileName="CollegeManagement/Views/StudentDashboard/Fees.cshtml" Line="31" Column="105" />
+      <File FileName="CollegeManagement/Views/StudentDashboard/Exams.cshtml" Line="3" Column="31" />
+      <File FileName="CollegeManagement/Views/StudentDashboard/Assignments.cshtml" Line="39" Column="72" />
+      <File FileName="CollegeManagement/Views/StudentDashboard/Courses.cshtml" Line="33" Column="55" />
+      <File FileName="CollegeManagement/Views/StudentDashboard/Results.cshtml" Line="61" Column="9" />
+      <File FileName="CollegeManagement/Models/Student/StudentInfo.cs" Line="16" Column="41" />
+      <File FileName="CollegeManagement/Models/Courses/Course.cs" Line="15" Column="44" />
+      <File FileName="CollegeManagement/Models/Student/StudentCourse.cs" Line="16" Column="1" />
+      <File FileName="CollegeManagement/Models/Results/Result.cs" Line="24" Column="1" />
+      <File FileName="CollegeManagement/Models/Assignments/Assignment.cs" Line="19" Column="31" />
+      <File FileName="CollegeManagement/Models/Attendences/Attendence.cs" Line="21" Column="1" />
+      <File FileName="CollegeManagement/Models/Documents/Document.cs" Line="19" Column="1" />
+      <File FileName="CollegeManagement/Models/Fees/Fee.cs" Line="20" Column="1" />
+      <File FileName="CollegeManagement/Views/Shared/_StudentLayout.cshtml" Line="75" Column="6" />
+      <File FileName="CollegeManagement/Models/ViewModels/ProfileViewModel.cs" Line="13" Column="1" />
+      <File FileName="CollegeManagement/Services/Student/MockStudentRepository.cs" Line="312" Column="1" />
+      <File FileName="CollegeManagement/Views/StudentDashboard/Timetable.cshtml" Line="71" Column="1" />
+      <File FileName="CollegeManagement/Models/Timetables/Timetable.cs" Line="23" Column="1" />
+      <File FileName="CollegeManagement/Models/Rooms/Room.cs" Line="7" Column="23" />
+      <File FileName="CollegeManagement/Models/Lecturers/Lecturer.cs" Line="10" Column="57" />
+      <File FileName="CollegeManagement/Services/Student/SqlStudentRepository.cs" Line="83" Column="26" />
+      <File FileName="CollegeManagement/Models/ViewModels/StudentDashboardViewModel.cs" Line="6" Column="49" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="CollegeManagement">
+            <Node name="CollegeManagement">
+              <Node name="Controllers" expanded="True">
+                <Node name="Student" expanded="True" />
+              </Node>
+              <Node name="Models">
+                <Node name="ViewModels" expanded="True" />
+              </Node>
+              <Node name="Properties" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Home" expanded="True" />
+                <Node name="Shared" expanded="True">
+                  <Node name="_StudentLayout.cshtml" selected="True" />
+                </Node>
+                <Node name="Student" expanded="True" />
+                <Node name="StudentDashboard" expanded="True" />
+              </Node>
+              <Node name="wwwroot" expanded="True">
+                <Node name="images" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.CollegeManagement FirstBuild="True" PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+</Properties>
